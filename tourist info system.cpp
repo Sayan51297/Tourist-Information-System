@@ -4,7 +4,11 @@
 #include <cstdlib>
 #include <conio.h>
 #include <iomanip>
+using namespace std;
 
+class log
+{
+public:
 void login()
 {
 	int a=0,i=0;
@@ -54,11 +58,9 @@ void login()
 	system("cls");
 	
 }
-using namespace std;
-int main() 
+void loop()
 {
-	login();
-    FILE *fp, *ft;
+	FILE *fp, *ft;
     char another, choice;
     int flag=0;
 	struct tourist
@@ -76,7 +78,6 @@ int main()
         if (fp==NULL)
         {
              puts("Cannot open file");
-             return 0;
         }
     }
 	recsize = sizeof(e);
@@ -207,6 +208,15 @@ int main()
               	exit(0);
         }
     }
+}
+};
+
+
+int main() 
+{
+	log p;
+	p.login();
+	p.loop();    
 	return 0;
 }
 
